@@ -44,11 +44,26 @@ h2 {
 }
 
 h3 {
-    color: var(--color-hp);
+    color: var(--color-p);
     font-family: 'arial', sans-serif;
     font-style: normal;
     font-weight: 500;
-    padding-left: 40px;
+    padding: 0px 40px 0px 40px;
+}
+
+h4 {
+    color: var(--color-p);
+    font-family: 'arial', sans-serif;
+    font-weight: 800;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+li {
+    color: var(--color-p);
+    font-family: 'arial', sans-serif;
+    font-weight: 200;
+    font-size: 1.1rem;
 }
 
 
@@ -105,7 +120,7 @@ a:hover {
 .dropdown_link {
     display: none;
     position: absolute;
-    right: -25px;
+    right: -35px;
     min-width: 150px;
     z-index: 1;
     line-height: 2;
@@ -161,7 +176,27 @@ span:hover {
 
 .front_text {
     padding-top: 8vw;
+
+    animation-name: front_text;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
+
+@keyframes front_text {
+    0% {
+        transform: scaleY(0.1);
+    }
+
+    95% {
+        transform: scaleY(0.8);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
+
 
 .front_text h1 {
     text-align: center;
@@ -316,7 +351,7 @@ span:hover {
 }
 
 /*----------------------------*/
-.overlay_uxweb {
+.overlay_uxd {
     display: inline;
     position: absolute;
     top: 0;
@@ -329,21 +364,20 @@ span:hover {
     margin-top: 20px;
 }
 
-.overlay_uxweb:hover {
+.overlay_uxd:hover {
     opacity: 1;
 }
 
-.overlay_uxweb h2 {
+.overlay_uxd h2 {
     position: absolute;
-    left: 30%;
+    left: 7%;
     top: 40%;
     text-align: center;
     color: var(--color-hover);
-
 }
 
 /*----------------------------*/
-.overlay_uxapp {
+.overlay_uxp {
     display: inline;
     position: absolute;
     top: 0;
@@ -356,11 +390,11 @@ span:hover {
     margin-top: 20px;
 }
 
-.overlay_uxapp:hover {
+.overlay_uxp:hover {
     opacity: 1;
 }
 
-.overlay_uxapp h2 {
+.overlay_uxp h2 {
     position: absolute;
     left: 30%;
     top: 40%;
@@ -375,6 +409,11 @@ li {
     font-weight: 200;
 }
 
+.experience p {
+    display: list-item;
+    list-style-type: disc;
+}
+
 #container {
     display: flex;
     flex-wrap: wrap;
@@ -386,10 +425,6 @@ li {
     position: relative;
     background-image: linear-gradient(#FFE5E2, #BFACAA);
     margin: 20px 20px 0px 30px;
-}
-
-#bg_image img:hover {
-    opacity: 0.4;
 }
 
 #bg_image img {
@@ -653,81 +688,124 @@ li {
 
 /* ------ UX WEB ------ */
 
-#uxw {
+#uxd {
     display: flex;
     flex-wrap: wrap;
-
     padding: 30px;
 }
 
-.uxw_headline h1 {
+.uxd_headline h1 {
     text-align: center;
     padding: 100px 0px 50px 0px;
     font-size: 5rem;
     border-bottom: 2vw #2f2f76 solid;
 }
 
-.column_uxw {
-    flex-direction: column;
-    justify-content: space-around;
-    flex-basis: 800px;
+.uxd_text {
+    text-align: justify;
+    flex-basis: 300px;
     flex-grow: 1;
-    border-bottom: 2vw #2f2f76 solid;
 }
 
-.column_uxw:last-child {
-    border-bottom: none;
+.uxd_text p {
+    padding: 20px 40px 0px 40px;
+    font-size: 1.1rem;
+    line-height: 1.5;
 }
 
-.column_uxw img {
-    padding: 40px;
-
-    width: 30vw;
+.uxd_image {
+    flex-basis: 300px;
+    flex-grow: 1;
+    text-align: center;
 }
 
-.column_uxw p {
-    text-align: right;
-    padding-top: 150px;
+.uxd_image img {
+    padding: 20px;
+    width: 250px;
 }
+
+.uxd_h2 {
+    padding-top: 30px;
+}
+
+.link_uxd {
+    text-align: left;
+    padding-bottom: 20px;
+    margin: 0px 70px;
+    border-bottom: 3px #2f2f76 solid;
+}
+
+.link_uxd a {
+    font-size: 1.5rem;
+    padding-left: 70px;
+}
+
+.uxd_tema {
+    padding: 20px 40px 20px 70px;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    text-align: left;
+}
+
 
 /* ------ UX APP ------ */
-
-#uxa {
+#uxp {
     display: flex;
     flex-wrap: wrap;
-
     padding: 30px;
 }
 
-.uxa_headline h1 {
+.uxp_headline h1 {
     text-align: center;
     padding: 100px 0px 50px 0px;
     font-size: 5rem;
-
     border-bottom: 2vw #ba9aa0 solid;
 }
 
-.column_uxa {
-    flex-direction: column;
-    justify-content: space-around;
-    flex-basis: 800px;
+.uxp_text {
+    text-align: justify;
+    flex-basis: 300px;
     flex-grow: 1;
-    border-bottom: 2vw #ba9aa0 solid;
 }
 
-.column_uxa:last-child {
-    border-bottom: none;
+.uxp_text p {
+    padding: 20px 40px 0px 40px;
+    font-size: 1.1rem;
+    line-height: 1.5;
 }
 
-.column_uxa img {
-    padding: 40px;
-
-    width: 30vw;
+.uxp_image {
+    flex-basis: 300px;
+    flex-grow: 1;
+    text-align: center;
 }
 
-.column_uxa p {
-    text-align: right;
-    padding-top: 150px;
+.uxp_image img {
+    padding: 20px;
+    width: 250px;
+}
+
+.uxp_h2 {
+    padding-top: 30px;
+}
+
+.link_uxp {
+    text-align: left;
+    padding-bottom: 20px;
+    margin: 0px 70px;
+    border-bottom: 3px #ba9aa0 solid;
+}
+
+.link_uxp a {
+    font-size: 1.5rem;
+    padding-left: 70px;
+}
+
+.uxp_tema {
+    padding: 20px 40px 20px 70px;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    text-align: left;
 }
 
 
