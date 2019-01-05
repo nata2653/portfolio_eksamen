@@ -6,49 +6,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="imagefavicon/png" sizes="192x192" href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="imagefavicon/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="imagefavicon/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="imagefavicon/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
 </head>
 
-<header>
-    <div class="dropdown">
-        <span>Portfolio</span>
-        <div class="dropdown_link">
-            <ul>
+<body>
+    <header>
+        <div class="dropdown">
+            <span>Portfolio</span>
+            <div class="dropdown_link">
+                <ul>
 
+                    <li><a href="web.html">Web</a></li>
+                    <li><a href="video.html">Indhold</a></li>
+                    <li><a href="animation.html">Animation</a></li>
+                    <li><a href="ux-designsprint.html">UX-designsprint</a></li>
+                    <li><a href="ux-app.html">UX-app</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="navbar">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Forside</a></li>
+                    <li><a href="cv.html">CV</a></li>
+
+                </ul>
+            </nav>
+        </div>
+
+        <nav id="burger">
+            <div id="menuknap">☰</div>
+            <ul id="menu" class="hidden">
+                <li><a href="index.html">Forside</a></li>
+                <li><a href="cv.html">CV</a></li>
                 <li><a href="web.html">Web</a></li>
                 <li><a href="video.html">Indhold</a></li>
                 <li><a href="animation.html">Animation</a></li>
                 <li><a href="ux-designsprint.html">UX-designsprint</a></li>
                 <li><a href="ux-app.html">UX-app</a></li>
             </ul>
-        </div>
-    </div>
-
-    <div id="navbar">
-        <nav>
-            <ul>
-                <li><a href="index.html">Forside</a></li>
-                <li><a href="cv.html">CV</a></li>
-
-            </ul>
         </nav>
-    </div>
 
-    <nav>
-        <div id="menuknap">☰</div>
-        <ul id="menu" class="hidden">
-            <li><a href="index.html">Forside</a></li>
-            <li><a href="cv.html">CV</a></li>
-            <li><a href="web.html">Web</a></li>
-            <li><a href="video.html">Indhold</a></li>
-            <li><a href="animation.html">Animation</a></li>
-            <li><a href="ux-designsprint.html">UX-designsprint</a></li>
-            <li><a href="ux-app.html">UX-app</a></li>
-        </ul>
-    </nav>
-
-</header>
-
-<body>
+    </header>
 
     <div class="front_text">
         <h2>Natalie Sirich</h2>
@@ -56,16 +74,13 @@
         <h1>Portfolio</h1>
     </div>
 
-
     <div id="boxes">
         <div id="box">
             <a href="cv.html">
                 <div class="overlay_cv">
                     <h2>CV</h2>
                 </div>
-
-                <img src="billeder/kkkk.jpg" alt="">
-
+                <img src="billeder/mig345.png">
             </a>
         </div>
 
@@ -73,7 +88,7 @@
             <a href="web.html">
                 <div class="overlay_web">
                     <h2>Web</h2>
-                </div> <img src="billeder/test_01.png" alt="">
+                </div> <img src="billeder/01_1.png" alt="">
             </a>
         </div>
 
@@ -81,14 +96,14 @@
             <a href="video.html">
                 <div class="overlay_content">
                     <h2>Indhold</h2>
-                </div><img src="billeder/test_b02.png" alt="">
+                </div><img src="billeder/02_redesign.jpg" alt="">
             </a>
         </div>
         <div id="box">
             <a href="animation.html">
                 <div class="overlay_animation">
                     <h2>Animation</h2>
-                </div><img src="billeder/test_03_1.png" alt="">
+                </div><img src="billeder/03_gruppespil.jpg" alt="">
 
             </a>
         </div>
@@ -97,7 +112,7 @@
                 <div class="overlay_uxd">
                     <h2>UX-designsprint</h2>
                 </div>
-                <img src="billeder/test_04.png" alt="">
+                <img src="billeder/04_egenprototype.jpg" alt="">
             </a>
         </div>
 
@@ -105,7 +120,7 @@
                 <div class="overlay_uxp">
                     <h2>UX-app</h2>
                 </div>
-                <img src="billeder/04_pink.jpg" alt="">
+                <img src="billeder/04_2kamera.jpg" alt="">
             </a>
         </div>
 

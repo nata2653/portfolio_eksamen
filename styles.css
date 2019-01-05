@@ -1,3 +1,20 @@
+/*
+0.0 Generelt
+0.1 Nav
+0.2 Burgermenu
+1.1 Index
+1.2 Hover
+2.1 CV
+3.1 Web
+4.1 Indhold
+5.1 Animation
+6.1 UX-Designspring
+7.1 UX-prototyper
+8. Media queries
+*/
+
+/* -------- 0.0 GENERELT -------------- */
+
 * {
     margin: 0;
 }
@@ -10,6 +27,7 @@ body {
     background-color: #fcfcfc;
     max-width: 1499px;
     padding-bottom: 20px;
+
 }
 
 :root {
@@ -66,8 +84,12 @@ li {
     font-size: 1.1rem;
 }
 
+.program {
+    margin-bottom: 15px;
+}
 
-/* ----- NAV ----- */
+
+/* ----- 0.1 NAV ----- */
 nav {
     list-style-type: none;
     overflow: hidden;
@@ -120,8 +142,8 @@ a:hover {
 .dropdown_link {
     display: none;
     position: absolute;
-    right: -35px;
-    min-width: 150px;
+    right: -85px;
+    min-width: 250px;
     z-index: 1;
     line-height: 2;
 }
@@ -138,7 +160,7 @@ span:hover {
 }
 
 
-/* ----- BURGERMENU */
+/* ----- 0.2 BURGERMENU ----- */
 
 .hidden {
     transform: scale(0);
@@ -157,22 +179,28 @@ span:hover {
     list-style-type: none;
     transform-origin: top left;
     background-color: rgba(252, 252, 252, 0.69);
-    height: auto;
-    width: 150px;
+    width: 300px;
     text-align: left;
     padding-bottom: 20px;
+}
+
+#burger {
+    width: 200px;
 }
 
 #menu li {
     padding-top: 30px;
     display: block;
     text-align: left;
+}
 
+#menu a {
+    font-size: 1rem;
 }
 
 
 
-/* ----- INDEX ------ */
+/* ----- 1.1 INDEX ------ */
 
 .front_text {
     padding-top: 8vw;
@@ -189,7 +217,7 @@ span:hover {
     }
 
     95% {
-        transform: scaleY(0.8);
+        transform: scaleY(0.99);
     }
 
     100% {
@@ -232,40 +260,46 @@ span:hover {
     max-height: 100%;
     text-align: center;
     position: relative;
+    padding-bottom: 40px;
 }
 
 #box img {
-    width: 250px;
+    width: 300px;
     height: auto;
-    padding: 20px 0px 10px 0px;
+    box-shadow: 11px 12px 30px -8px #555353;
 }
 
 
-/*-----------HOVER-------------*/
+/*----------- 1.2 HOVER-------------*/
 .overlay_cv {
     display: inline;
     position: absolute;
     top: 0;
     bottom: 0;
-    height: 88%;
-    width: 250px;
+    height: 87%;
+    width: 300px;
     opacity: 0;
     transition: .5s ease;
-    background-color: #FFE5E2;
-    margin-top: 20px;
+    background-color: #7F6A6E;
 }
 
 .overlay_cv:hover {
     opacity: 1;
+    /*    transition: 0.7s linear;
+    */
 }
 
 .overlay_cv h2 {
     position: absolute;
-    left: 40%;
+    left: 30%;
     top: 40%;
     text-align: center;
     color: var(--color-hover);
-
+    border: 1px white solid;
+    width: 40%;
+    font-weight: 300;
+    font-family: 'montserrat',
+        sans-serif;
 }
 
 /*----------------------------*/
@@ -275,25 +309,30 @@ span:hover {
     position: absolute;
     top: 0;
     bottom: 0;
-    height: 88%;
-    width: 250px;
+    height: 87%;
+    width: 300px;
     opacity: 0;
     transition: .5s ease;
     background-color: #d19494;
-    margin-top: 20px;
 }
 
 .overlay_web:hover {
     opacity: 1;
+    transition: 0.7s;
+
 }
 
 .overlay_web h2 {
     position: absolute;
-    left: 40%;
+    left: 30%;
     top: 40%;
     text-align: center;
     color: var(--color-hover);
-
+    border: 1px white solid;
+    width: 40%;
+    font-weight: 300;
+    font-family: 'montserrat',
+        sans-serif;
 }
 
 /*----------------------------*/
@@ -302,12 +341,11 @@ span:hover {
     position: absolute;
     top: 0;
     bottom: 0;
-    height: 88%;
-    width: 250px;
+    height: 87%;
+    width: 300px;
     opacity: 0;
     transition: .5s ease;
-    background-color: #555353;
-    margin-top: 20px;
+    background-color: #BA9AA0;
 }
 
 .overlay_content:hover {
@@ -316,11 +354,15 @@ span:hover {
 
 .overlay_content h2 {
     position: absolute;
-    left: 30%;
+    left: 25%;
     top: 40%;
     text-align: center;
     color: var(--color-hover);
-
+    border: 1px white solid;
+    width: 50%;
+    font-weight: 300;
+    font-family: 'montserrat',
+        sans-serif;
 }
 
 /*----------------------------*/
@@ -329,26 +371,32 @@ span:hover {
     position: absolute;
     top: 0;
     bottom: 0;
-    height: 88%;
-    width: 250px;
+    height: 87%;
+    width: 300px;
     opacity: 0;
     transition: .5s ease;
     background-color: #9a7d91;
-    margin-top: 20px;
 }
 
 .overlay_animation:hover {
     opacity: 1;
+    transition: 0.7s;
+
 }
 
 .overlay_animation h2 {
     position: absolute;
-    left: 25%;
+    left: 18%;
     top: 40%;
     text-align: center;
     color: var(--color-hover);
-
+    border: 1px white solid;
+    width: 65%;
+    font-weight: 300;
+    font-family: 'montserrat',
+        sans-serif;
 }
+
 
 /*----------------------------*/
 .overlay_uxd {
@@ -356,24 +404,30 @@ span:hover {
     position: absolute;
     top: 0;
     bottom: 0;
-    height: 88%;
-    width: 250px;
+    height: 87%;
+    width: 300px;
     opacity: 0;
     transition: .5s ease;
-    background-color: #2f2f76;
-    margin-top: 20px;
+    background-color: #CBAAB0;
 }
 
 .overlay_uxd:hover {
     opacity: 1;
+    transition: 0.7s;
+
 }
 
 .overlay_uxd h2 {
     position: absolute;
-    left: 7%;
+    left: 1%;
     top: 40%;
     text-align: center;
     color: var(--color-hover);
+    border: 1px white solid;
+    width: 97%;
+    font-weight: 300;
+    font-family: 'montserrat',
+        sans-serif;
 }
 
 /*----------------------------*/
@@ -382,27 +436,34 @@ span:hover {
     position: absolute;
     top: 0;
     bottom: 0;
-    height: 88%;
-    width: 250px;
+    height: 87%;
+    width: 300px;
     opacity: 0;
     transition: .5s ease;
-    background-color: #ba9aa0;
-    margin-top: 20px;
+    background-color: #706470;
 }
 
 .overlay_uxp:hover {
     opacity: 1;
+    transition: 0.7s;
+
 }
 
 .overlay_uxp h2 {
     position: absolute;
-    left: 30%;
+    left: 25%;
     top: 40%;
     text-align: center;
     color: var(--color-hover);
+    border: 1px white solid;
+    width: 50%;
+    height: 17%;
+    font-weight: 300;
+    font-family: 'montserrat',
+        sans-serif;
 }
 
-/* ------ CV ------ */
+/* ------ 2.1 CV ------ */
 
 li {
     list-style-type: none;
@@ -506,12 +567,13 @@ li {
     padding: 100px 30px 0px;
 }
 
-/*------ WEB ------ */
+/*------ 3.1 WEB ------ */
 
 #web {
     display: flex;
     flex-wrap: wrap;
     padding: 30px;
+    align-content: flex-start;
 }
 
 .web_headline h1 {
@@ -537,6 +599,7 @@ li {
     flex-basis: 300px;
     flex-grow: 1;
     text-align: center;
+    position: relative;
 }
 
 .web_image img {
@@ -550,28 +613,19 @@ li {
 
 .link_web a {
     font-size: 1.5rem;
-    padding-left: 70px;
+    margin-left: 70px;
+    padding: 10px;
+    border: 1px black solid;
+    box-shadow: 8px 10px 20px -10px;
+    border-radius: 4px;
 }
 
-/*
-.column_pic {
-    margin: auto;
-    max-width: 80%;
-    text-align: center;
-    flex-basis: 700px;
-    flex-grow: 1;
-    height: 40vw;
-    background-image: url(billeder/03_egetspil.png);
-    background-size: cover;
-    position: relative;
+.link_web a:hover {
+    background-color: #d19494;
+    color: white;
 }
 
-.column_pic:hover {
-    background-image: linear-gradient(rgba(250, 205, 236, 0.74), rgba(74, 106, 213, 0.6)), url(billeder/03_egetspil.png);
-}
-*/
-
-/*------ INDHOLD ------ */
+/*------ 4.1 INDHOLD ------ */
 #content {
     display: flex;
     flex-wrap: wrap;
@@ -583,7 +637,7 @@ li {
     text-align: center;
     padding: 100px 0px 50px 0px;
     font-size: 5rem;
-    border-bottom: 2vw #555353 solid;
+    border-bottom: 2vw #BA9AA0 solid;
 }
 
 .content_text {
@@ -619,15 +673,55 @@ li {
 
 .content_link {
     text-align: left;
-    padding-left: 70px;
+    margin-left: 70px;
+
 }
 
 .content_link a {
+    border: 1px black solid;
+    box-shadow: 8px 10px 20px -10px;
+    border-radius: 4px;
+    padding: 6px;
     font-size: 1.5rem;
     line-height: 1.7;
 }
 
-/* ------ ANIMATION ------ */
+.content_link a:hover {
+    background-color: #BA9AA0;
+    color: white;
+}
+
+
+/* ------ 5.1 ANIMATION ------ */
+#dans {
+    position: absolute;
+    top: -5vw;
+    left: 3vw;
+    width: 7vw;
+    height: 35vw;
+    z-index: 3;
+    background-image: url(billeder/danse.svg);
+    background-size: 800% 100%;
+    animation-iteration-count: infinite;
+
+    animation-name: danse_kf;
+    animation-duration: 2s;
+    animation-timing-function: steps(7);
+    animation-fill-mode: both;
+}
+
+@keyframes danse_kf {
+    from {
+        background-position: 0%;
+    }
+
+    to {
+        background-position: -700%;
+    }
+
+}
+
+
 
 #animation {
     display: flex;
@@ -683,10 +777,20 @@ li {
 
 .animation_link a {
     font-size: 1.5rem;
-    line-height: 1.7;
+    border: 1px black solid;
+    box-shadow: 8px 10px 20px -10px;
+    border-radius: 4px;
+    padding: 6px;
+    font-size: 1.5rem;
+    line-height: 2.5;
 }
 
-/* ------ UX WEB ------ */
+.animation_link a:hover {
+    background-color: #9a7d91;
+    color: white;
+}
+
+/* ------ 6.1 UX-designsprint ------ */
 
 #uxd {
     display: flex;
@@ -698,7 +802,7 @@ li {
     text-align: center;
     padding: 100px 0px 50px 0px;
     font-size: 5rem;
-    border-bottom: 2vw #2f2f76 solid;
+    border-bottom: 2vw #CBAAB0 solid;
 }
 
 .uxd_text {
@@ -732,12 +836,22 @@ li {
     text-align: left;
     padding-bottom: 20px;
     margin: 0px 70px;
-    border-bottom: 3px #2f2f76 solid;
+    border-bottom: 3px #CBAAB0 solid;
 }
 
 .link_uxd a {
     font-size: 1.5rem;
     padding-left: 70px;
+    border: 1px black solid;
+    box-shadow: 8px 10px 20px -10px;
+    border-radius: 4px;
+    padding: 6px;
+    line-height: 2.5;
+}
+
+.link_uxd a:hover {
+    background-color: #CBAAB0;
+    color: white;
 }
 
 .uxd_tema {
@@ -748,7 +862,7 @@ li {
 }
 
 
-/* ------ UX APP ------ */
+/* ------ 7.1 UX-prototyper ------ */
 #uxp {
     display: flex;
     flex-wrap: wrap;
@@ -759,7 +873,7 @@ li {
     text-align: center;
     padding: 100px 0px 50px 0px;
     font-size: 5rem;
-    border-bottom: 2vw #ba9aa0 solid;
+    border-bottom: 2vw #706470 solid;
 }
 
 .uxp_text {
@@ -782,7 +896,7 @@ li {
 
 .uxp_image img {
     padding: 20px;
-    width: 250px;
+    width: 200px;
 }
 
 .uxp_h2 {
@@ -793,12 +907,22 @@ li {
     text-align: left;
     padding-bottom: 20px;
     margin: 0px 70px;
-    border-bottom: 3px #ba9aa0 solid;
+    border-bottom: 3px #706470 solid;
 }
 
 .link_uxp a {
     font-size: 1.5rem;
     padding-left: 70px;
+    border: 1px black solid;
+    box-shadow: 8px 10px 20px -10px;
+    border-radius: 4px;
+    padding: 6px;
+    line-height: 2.5;
+}
+
+.link_uxp a:hover {
+    background-color: #706470;
+    color: white;
 }
 
 .uxp_tema {
@@ -809,7 +933,7 @@ li {
 }
 
 
-/* ------ MEDIA QUERIES ------ */
+/* ------ 8. MEDIA QUERIES ------ */
 
 /* ALL OVER*/
 @media only screen and (max-width: 414px) {
@@ -960,4 +1084,19 @@ li {
         margin: 0px 30px;
     }
 
+    #dans {
+        position: absolute;
+        top: 1vw;
+        left: 40vw;
+        width: 15vw;
+        height: 35vw;
+
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #dans {
+        left: 45vw;
+        top: -8vw;
+    }
 }
