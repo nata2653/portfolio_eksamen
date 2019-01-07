@@ -10,7 +10,8 @@
 5.1 Animation
 6.1 UX-Designspring
 7.1 UX-prototyper
-8. Media queries
+8.1 FOOTER
+9.0 Media queries
 */
 
 /* -------- 0.0 GENERELT -------------- */
@@ -33,7 +34,7 @@ body {
 :root {
     --color-p: #393737;
     --color-h1: #555353;
-    --color-h2: #9a7d91;
+    --color-h2: #7e7e7e;
     --color-hover: #f8f8f8;
 }
 
@@ -56,7 +57,8 @@ p {
 h2 {
     color: var(--color-h2);
     text-align: center;
-    font-family: 'didot', serif;
+    font-family: 'montserrat',
+        sans-serif;
     font-style: normal;
     font-weight: 100;
 }
@@ -142,8 +144,8 @@ a:hover {
 .dropdown_link {
     display: none;
     position: absolute;
-    right: -85px;
-    min-width: 250px;
+    right: -135px;
+    min-width: 300px;
     z-index: 1;
     line-height: 2;
 }
@@ -151,8 +153,7 @@ a:hover {
 .dropdown:hover .dropdown_link {
     display: block;
     cursor: pointer;
-    background-color: rgba(252, 252, 252, 0.69);
-
+    background-color: rgba(252, 252, 252, 0.93);
 }
 
 span:hover {
@@ -164,6 +165,7 @@ span:hover {
 
 .hidden {
     transform: scale(0);
+    display: none;
 }
 
 #menuknap {
@@ -178,7 +180,7 @@ span:hover {
     transition: transform 0.3s;
     list-style-type: none;
     transform-origin: top left;
-    background-color: rgba(252, 252, 252, 0.69);
+    background-color: rgba(252, 252, 252, 0.87);
     width: 300px;
     text-align: left;
     padding-bottom: 20px;
@@ -186,6 +188,7 @@ span:hover {
 
 #burger {
     width: 200px;
+    z-index: 2;
 }
 
 #menu li {
@@ -197,8 +200,6 @@ span:hover {
 #menu a {
     font-size: 1rem;
 }
-
-
 
 /* ----- 1.1 INDEX ------ */
 
@@ -225,16 +226,18 @@ span:hover {
     }
 }
 
-
 .front_text h1 {
     text-align: center;
-    font-size: 10rem;
+    font-size: 9rem;
     margin-bottom: 80px;
 }
 
 .front_text h2 {
     font-size: 3.5rem;
     font-style: italic;
+    font-family: 'Petit Formal Script', cursive;
+
+    color: #be939a;
 }
 
 #intro p {
@@ -251,7 +254,7 @@ span:hover {
     width: 80%;
 }
 
-#box {
+.box {
     flex-basis: 300px;
     flex-grow: 1;
 
@@ -263,7 +266,7 @@ span:hover {
     padding-bottom: 40px;
 }
 
-#box img {
+.box img {
     width: 300px;
     height: auto;
     box-shadow: 11px 12px 30px -8px #555353;
@@ -278,15 +281,13 @@ span:hover {
     bottom: 0;
     height: 87%;
     width: 300px;
-    opacity: 0;
+    opacity: 0.3;
     transition: .5s ease;
     background-color: #7F6A6E;
 }
 
 .overlay_cv:hover {
     opacity: 1;
-    /*    transition: 0.7s linear;
-    */
 }
 
 .overlay_cv h2 {
@@ -311,15 +312,13 @@ span:hover {
     bottom: 0;
     height: 87%;
     width: 300px;
-    opacity: 0;
+    opacity: 0.3;
     transition: .5s ease;
     background-color: #d19494;
 }
 
 .overlay_web:hover {
     opacity: 1;
-    transition: 0.7s;
-
 }
 
 .overlay_web h2 {
@@ -343,7 +342,7 @@ span:hover {
     bottom: 0;
     height: 87%;
     width: 300px;
-    opacity: 0;
+    opacity: 0.3;
     transition: .5s ease;
     background-color: #BA9AA0;
 }
@@ -373,15 +372,13 @@ span:hover {
     bottom: 0;
     height: 87%;
     width: 300px;
-    opacity: 0;
+    opacity: 0.3;
     transition: .5s ease;
     background-color: #9a7d91;
 }
 
 .overlay_animation:hover {
     opacity: 1;
-    transition: 0.7s;
-
 }
 
 .overlay_animation h2 {
@@ -406,15 +403,13 @@ span:hover {
     bottom: 0;
     height: 87%;
     width: 300px;
-    opacity: 0;
+    opacity: 0.3;
     transition: .5s ease;
     background-color: #CBAAB0;
 }
 
 .overlay_uxd:hover {
     opacity: 1;
-    transition: 0.7s;
-
 }
 
 .overlay_uxd h2 {
@@ -438,15 +433,13 @@ span:hover {
     bottom: 0;
     height: 87%;
     width: 300px;
-    opacity: 0;
+    opacity: 0.3;
     transition: .5s ease;
     background-color: #706470;
 }
 
 .overlay_uxp:hover {
     opacity: 1;
-    transition: 0.7s;
-
 }
 
 .overlay_uxp h2 {
@@ -457,13 +450,19 @@ span:hover {
     color: var(--color-hover);
     border: 1px white solid;
     width: 50%;
-    height: 17%;
+    height: 14%;
     font-weight: 300;
     font-family: 'montserrat',
         sans-serif;
 }
 
 /* ------ 2.1 CV ------ */
+
+.cv_headline h1 {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 4rem;
+}
 
 li {
     list-style-type: none;
@@ -503,7 +502,7 @@ li {
 .sectionwrapper {
     flex-basis: 200px;
     flex-grow: 1;
-
+    height: auto;
     width: auto;
     padding: 20px 20px 0px 30px;
 }
@@ -556,7 +555,7 @@ li {
 }
 
 .section li {
-    font-family: 'Helvetica', sans-serif;
+    font-family: 'arial', sans-serif;
     font-size: 1rem;
     padding-right: 30px;
     line-height: 1.5;
@@ -565,6 +564,10 @@ li {
 .so_me img {
     width: 50px;
     padding: 100px 30px 0px;
+}
+
+#footer_cv {
+    margin: 40px 30px 0px 30px;
 }
 
 /*------ 3.1 WEB ------ */
@@ -599,11 +602,10 @@ li {
     flex-basis: 300px;
     flex-grow: 1;
     text-align: center;
-    position: relative;
 }
 
 .web_image img {
-    padding: 20px;
+    padding: 10px;
     width: 250px;
 }
 
@@ -611,9 +613,13 @@ li {
     padding-top: 30px;
 }
 
+.link_web {
+    padding: 30px;
+    text-align: center;
+}
+
 .link_web a {
     font-size: 1.5rem;
-    margin-left: 70px;
     padding: 10px;
     border: 1px black solid;
     box-shadow: 8px 10px 20px -10px;
@@ -624,6 +630,7 @@ li {
     background-color: #d19494;
     color: white;
 }
+
 
 /*------ 4.1 INDHOLD ------ */
 #content {
@@ -672,9 +679,8 @@ li {
 }
 
 .content_link {
-    text-align: left;
-    margin-left: 70px;
-
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .content_link a {
@@ -695,11 +701,11 @@ li {
 /* ------ 5.1 ANIMATION ------ */
 #dans {
     position: absolute;
-    top: -5vw;
+    top: -12vw;
     left: 3vw;
     width: 7vw;
     height: 35vw;
-    z-index: 3;
+    z-index: 1;
     background-image: url(billeder/danse.svg);
     background-size: 800% 100%;
     animation-iteration-count: infinite;
@@ -718,10 +724,7 @@ li {
     to {
         background-position: -700%;
     }
-
 }
-
-
 
 #animation {
     display: flex;
@@ -765,13 +768,12 @@ li {
 }
 
 .animation_link {
-    text-align: left;
+    text-align: center;
     padding-bottom: 20px;
     border-bottom: 3px #9a7d91 solid;
-    margin: 0px 70px;
 }
 
-.animation_link:last-child {
+.animation_link:last-of-type {
     border-bottom: none;
 }
 
@@ -833,9 +835,8 @@ li {
 }
 
 .link_uxd {
-    text-align: left;
+    text-align: center;
     padding-bottom: 20px;
-    margin: 0px 70px;
     border-bottom: 3px #CBAAB0 solid;
 }
 
@@ -847,6 +848,10 @@ li {
     border-radius: 4px;
     padding: 6px;
     line-height: 2.5;
+}
+
+.link_uxd:last-of-type {
+    border-bottom: none;
 }
 
 .link_uxd a:hover {
@@ -904,10 +909,13 @@ li {
 }
 
 .link_uxp {
-    text-align: left;
+    text-align: center;
     padding-bottom: 20px;
-    margin: 0px 70px;
     border-bottom: 3px #706470 solid;
+}
+
+.link_ux:last-of-type {
+    border-bottom: none;
 }
 
 .link_uxp a {
@@ -932,8 +940,55 @@ li {
     text-align: left;
 }
 
+/* ------ 8.0 FOOTER ------ */
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 10px 40px 10px 40px;
+    text-align: center;
+    margin: 0;
+    background-color: rgba(128, 128, 128, 0.06);
+}
 
-/* ------ 8. MEDIA QUERIES ------ */
+.footer_some {
+    flex-basis: 100px;
+    flex-grow: 1;
+    text-align: left;
+}
+
+.footer_some img {
+    width: 30px;
+}
+
+.footer_info {
+    flex-basis: 100px;
+    flex-grow: 1;
+}
+
+.footer_info p {
+    font-style: normal;
+    font-weight: 300;
+    font-family: 'montserrat', sans-serif;
+    font-size: 1rem;
+}
+
+.footer_nav {
+    flex-basis: 100px;
+    flex-grow: 1;
+}
+
+.footer_nav li {
+    display: block;
+    text-align: right;
+}
+
+.footer_nav a {
+    font-size: 1rem;
+}
+
+
+/* ------ 9.0 MEDIA QUERIES ------ */
 
 /* ALL OVER*/
 @media only screen and (max-width: 414px) {
@@ -976,7 +1031,7 @@ li {
 
 /* INDEX */
 
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 665px) {
     .front_text h1 {
         font-size: 3rem;
     }
@@ -987,8 +1042,14 @@ li {
     }
 }
 
+@media only screen and (max-width:320px) {
+    #boxes {
+        margin: 10px;
+    }
+}
+
 /* CV */
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 665px) {
     .description p {
         padding: 0;
     }
@@ -1014,14 +1075,100 @@ li {
 
 @media only screen and (min-width: 1700px) {
     #bg_image img {
-        left: 18vw;
+        left: 8vw;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .description p {
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .overlay_cv {
+        display: inline;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        height: 87%;
+        width: 300px;
+        opacity: 0.8;
+        transition: .5s ease;
+        background-color: #7F6A6E;
+    }
+
+    /*----------------------------*/
+
+    .overlay_web {
+        display: inline;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        height: 87%;
+        width: 300px;
+        opacity: 0.8;
+        transition: .5s ease;
+        background-color: #d19494;
+    }
+
+    /*----------------------------*/
+    .overlay_content {
+        display: inline;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        height: 87%;
+        width: 300px;
+        opacity: 0.8;
+        transition: .5s ease;
+        background-color: #BA9AA0;
+    }
+
+    /*----------------------------*/
+    .overlay_animation {
+        display: inline;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        height: 87%;
+        width: 300px;
+        opacity: 0.8;
+        transition: .5s ease;
+        background-color: #9a7d91;
+    }
+
+    /*----------------------------*/
+    .overlay_uxd {
+        display: inline;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        height: 87%;
+        width: 300px;
+        opacity: 0.8;
+        transition: .5s ease;
+        background-color: #CBAAB0;
+    }
+
+    /*----------------------------*/
+    .overlay_uxp {
+        display: inline;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        height: 87%;
+        width: 300px;
+        opacity: 0.8;
+        transition: .5s ease;
+        background-color: #706470;
     }
 }
 
 /*WEB*/
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 665px) {
     .web_headline h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .web_text p {
@@ -1033,15 +1180,14 @@ li {
     }
 
     .link_web a {
-        padding-left: 30px;
+        font-size: 1.2rem;
     }
-
 }
 
 /*INDHOLD*/
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 665px) {
     .content_headline h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .content_text p {
@@ -1053,23 +1199,23 @@ li {
     }
 
     .content_link a {
-        font-size: 1.2rem;
-    }
-
-    .content_link {
-        padding-left: 20px;
+        font-size: 1rem;
     }
 
 }
 
 /*ANIMATION*/
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 665px) {
     .animation_headline h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .animation_text p {
         padding: 0;
+    }
+
+    .animation_h2 h2 {
+        font-size: 1.2rem;
     }
 
     .animation_image img {
@@ -1077,26 +1223,122 @@ li {
     }
 
     .animation_link a {
-        font-size: 1.1rem;
+        font-size: 0.9rem;
     }
 
     .animation_link {
         margin: 0px 30px;
     }
 
+}
+
+@media only screen and (max-width: 800px) {
+
     #dans {
-        position: absolute;
-        top: 1vw;
-        left: 40vw;
-        width: 15vw;
-        height: 35vw;
+        left: 2vw;
+        top: 12vw;
+        width: 10vw;
 
     }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 540px) {
+
     #dans {
-        left: 45vw;
-        top: -8vw;
+        left: 40vw;
+        top: -5vw;
+        width: 10vw;
+
+    }
+}
+
+/*UX-DESIGNSPRINT*/
+@media only screen and (max-width: 665px) {
+    .uxd_headline h1 {
+        font-size: 2rem;
+    }
+
+    .uxd_text p {
+        padding: 0;
+    }
+
+    .uxd_h2 h2 {
+        font-size: 1.2rem;
+    }
+
+    .uxd_image img {
+        padding: 20px 0px;
+    }
+
+    .link_uxd a {
+        font-size: 0.7rem;
+    }
+
+    .link_uxd {
+        margin: 0px 30px;
+    }
+}
+
+/*UX-DESIGNSPRINT*/
+@media only screen and (max-width: 665px) {
+    .uxp_headline h1 {
+        font-size: 2rem;
+    }
+
+    .uxp_text p {
+        padding: 0;
+    }
+
+    .uxp_h2 h2 {
+        font-size: 1.2rem;
+    }
+
+    .uxp_image img {
+        padding: 20px 0px;
+    }
+
+    .link_uxp a {
+        font-size: 0.7rem;
+    }
+
+    .link_uxp {
+        margin: 0px 30px;
+    }
+}
+
+@media only screen and (max-width: 665px) {
+    footer {
+        margin-top: 20px;
+    }
+
+    .footer_some {
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    .footer_info {
+        flex-basis: 500px;
+        flex-grow: 1;
+        padding-bottom: 10px;
+    }
+
+    .footer_info p {
+        font-style: normal;
+        font-weight: 300;
+        font-family: 'montserrat', sans-serif;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .footer_nav li {
+        text-align: center;
+    }
+
+    .footer_nav ul {
+        padding: 0;
+    }
+
+    .footer_nav a {
+        font-size: 1rem;
     }
 }
