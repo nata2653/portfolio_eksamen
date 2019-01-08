@@ -100,7 +100,7 @@ nav {
     width: 80vw;
     text-align: right;
     z-index: 1;
-    padding-top: 25px;
+    padding-top: 35px;
     height: auto;
 }
 
@@ -137,7 +137,7 @@ a:hover {
         sans-serif;
     font-size: 1.2rem;
     left: 80vw;
-    top: 50px;
+    top: 60px;
     z-index: 1;
 }
 
@@ -214,22 +214,18 @@ span:hover {
 
 @keyframes front_text {
     0% {
-        transform: scaleY(0.1);
-    }
-
-    95% {
-        transform: scaleY(0.99);
+        transform: translateY(-20px);
     }
 
     100% {
-        transform: scaleY(1);
+        transform: translateY(5px);
     }
 }
 
 .front_text h1 {
     text-align: center;
     font-size: 9rem;
-    margin-bottom: 80px;
+    margin-bottom: 60px;
 }
 
 .front_text h2 {
@@ -414,12 +410,12 @@ span:hover {
 
 .overlay_uxd h2 {
     position: absolute;
-    left: 1%;
+    left: 5%;
     top: 40%;
     text-align: center;
     color: var(--color-hover);
     border: 1px white solid;
-    width: 97%;
+    width: 88%;
     font-weight: 300;
     font-family: 'montserrat',
         sans-serif;
@@ -449,8 +445,8 @@ span:hover {
     text-align: center;
     color: var(--color-hover);
     border: 1px white solid;
-    width: 50%;
-    height: 14%;
+    width: 48%;
+    height: 13%;
     font-weight: 300;
     font-family: 'montserrat',
         sans-serif;
@@ -460,8 +456,31 @@ span:hover {
 
 .cv_headline h1 {
     text-align: center;
-    padding-top: 20px;
-    font-size: 4rem;
+    padding-top: 80px;
+    font-size: 10rem;
+    position: absolute;
+    top: 10vw;
+    left: 15vw;
+
+    animation-name: cv_headline;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes cv_headline {
+    0% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(5px);
+    }
+}
+
+video {
+    width: 80%;
 }
 
 li {
@@ -483,16 +502,16 @@ li {
     padding-top: 80px;
     height: 35vw;
     position: relative;
-    background-image: linear-gradient(#FFE5E2, #BFACAA);
+
     margin: 20px 20px 0px 30px;
 }
 
 #bg_image img {
-    width: 40vw;
+    width: 46vw;
     height: auto;
     position: absolute;
-    top: 35px;
-    left: 30%;
+    top: 0.8vw;
+    left: 46.5vw;
 }
 
 .hide {
@@ -505,6 +524,10 @@ li {
     height: auto;
     width: auto;
     padding: 20px 20px 0px 30px;
+}
+
+.sectionwrapper li {
+    padding-bottom: 5px;
 }
 
 .description {
@@ -545,6 +568,26 @@ li {
     padding: 0;
 }
 
+.it {
+    margin-left: 40px;
+}
+
+.it h3 {
+    text-align: left;
+    padding-left: 20px;
+    line-height: 3;
+    font-weight: 800;
+}
+
+.it li {
+    font-family: 'arial', sans-serif;
+    font-size: 1rem;
+    text-align: left;
+    padding-left: 20px;
+    line-height: 1.5;
+    list-style-type: circle;
+}
+
 .section {
     padding-top: 20px;
 }
@@ -561,11 +604,6 @@ li {
     line-height: 1.5;
 }
 
-.so_me img {
-    width: 50px;
-    padding: 100px 30px 0px;
-}
-
 #footer_cv {
     margin: 40px 30px 0px 30px;
 }
@@ -576,7 +614,6 @@ li {
     display: flex;
     flex-wrap: wrap;
     padding: 30px;
-    align-content: flex-start;
 }
 
 .web_headline h1 {
@@ -584,6 +621,22 @@ li {
     padding: 100px 0px 50px 0px;
     font-size: 5rem;
     border-bottom: 2vw #d19494 solid;
+
+    animation-name: web_headline;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes web_headline {
+    0% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(5px);
+    }
 }
 
 .web_text {
@@ -645,6 +698,21 @@ li {
     padding: 100px 0px 50px 0px;
     font-size: 5rem;
     border-bottom: 2vw #BA9AA0 solid;
+
+    animation-name: content_headline;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes content_headline {
+    0% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(5px);
+    }
 }
 
 .content_text {
@@ -701,7 +769,7 @@ li {
 /* ------ 5.1 ANIMATION ------ */
 #dans {
     position: absolute;
-    top: -12vw;
+    top: -5vw;
     left: 3vw;
     width: 7vw;
     height: 35vw;
@@ -733,12 +801,35 @@ li {
     padding: 30px;
 }
 
+#animation_group {
+    display: flex;
+    flex-wrap: wrap;
+
+    padding: 30px;
+}
+
 .animation_headline h1 {
     text-align: center;
     padding: 100px 0px 50px 0px;
     font-size: 5rem;
     border-bottom: 2vw #9a7d91 solid;
+
+    animation-name: animation_headline;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
+
+@keyframes animation_headline {
+    0% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(5px);
+    }
+}
+
 
 .animation_text {
     text-align: justify;
@@ -800,11 +891,32 @@ li {
     padding: 30px;
 }
 
+#uxd_2 {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
 .uxd_headline h1 {
     text-align: center;
     padding: 100px 0px 50px 0px;
     font-size: 5rem;
     border-bottom: 2vw #CBAAB0 solid;
+
+    animation-name: uxd_headline;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes uxd_headline {
+    0% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(5px);
+    }
 }
 
 .uxd_text {
@@ -874,11 +986,34 @@ li {
     padding: 30px;
 }
 
+#uxp_2 {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
 .uxp_headline h1 {
     text-align: center;
     padding: 100px 0px 50px 0px;
     font-size: 5rem;
     border-bottom: 2vw #706470 solid;
+
+    animation-name: uxp_headline;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+
+
+@keyframes uxp_headline {
+    0% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(5px);
+    }
 }
 
 .uxp_text {
@@ -938,6 +1073,12 @@ li {
     font-size: 1.1rem;
     line-height: 1.5;
     text-align: left;
+}
+
+iframe {
+    width: 100%;
+    height: 667px;
+    border: none;
 }
 
 /* ------ 8.0 FOOTER ------ */
@@ -1062,22 +1203,101 @@ footer {
         font-size: 1.5rem;
     }
 
-    .so_me img {
-        padding: 30px 0px;
-        0px 0px;
-    }
-
     #bg_image img {
         left: 20vw;
+    }
+}
+
+@media only screen and (min-width: 1560px) {
+    #bg_image img {
+        left: 45vw;
+        top: 0vw;
+    }
+
+    .cv_headline h1 {
+        left: 19vw;
     }
 
 }
 
 @media only screen and (min-width: 1700px) {
     #bg_image img {
-        left: 8vw;
+        left: 41vw;
+        top: -1vw;
     }
 }
+
+@media only screen and (min-width: 1800px) {
+    #bg_image img {
+        left: 39vw;
+    }
+}
+
+@media only screen and (min-width: 1900px) {
+    #bg_image img {
+        left: 36.5vw;
+    }
+
+    .cv_headline h1 {
+        top: 14vw;
+        left: 22vw;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .cv_headline h1 {
+        top: 9vw;
+        left: 15vw;
+        font-size: 8rem;
+    }
+
+    #bg_image img {
+        top: 3.8vw;
+        left: 45.1vw;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .cv_headline h1 {
+        top: 6vw;
+        left: 12vw;
+        font-size: 8rem;
+    }
+
+    #bg_image img {
+        top: 4.3vw;
+        left: 43.6vw;
+        width: 49vw;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .cv_headline h1 {
+        font-size: 3rem;
+        top: 43vw;
+        left: 40vw;
+    }
+
+    #bg_image img {
+        width: 61vw;
+        left: 13vw;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .it {
+        margin-left: 0px;
+    }
+
+    .it h3 {
+        padding-left: 10px;
+    }
+
+    .it li {
+        padding-left: 10px;
+    }
+}
+
 
 @media only screen and (max-width: 1024px) {
     .description p {
@@ -1232,23 +1452,42 @@ footer {
 
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1024px) {
 
     #dans {
-        left: 2vw;
-        top: 12vw;
+        left: 3vw;
+        top: 7vw;
         width: 10vw;
 
     }
 }
 
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 768px) {
+
+    #dans {
+        left: 10vw;
+        top: 2vw;
+        width: 10vw;
+
+    }
+}
+
+@media only screen and (max-width: 425px) {
+
+    #dans {
+        left: 20vw;
+        top: 8vw;
+        width: 10vw;
+
+    }
+}
+
+@media only screen and (max-width: 375px) {
 
     #dans {
         left: 40vw;
-        top: -5vw;
-        width: 10vw;
-
+        top: 2vw;
+        width: 13vw;
     }
 }
 
