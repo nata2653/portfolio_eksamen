@@ -28,7 +28,6 @@ body {
     background-color: #fcfcfc;
     max-width: 1499px;
     padding-bottom: 20px;
-
 }
 
 :root {
@@ -48,8 +47,7 @@ h1 {
 
 p {
     color: var(--color-p);
-    font-family: 'arial',
-        sans-serif;
+    font-family: 'arial', sans-serif;
     font-style: normal;
     font-weight: 200;
 }
@@ -57,8 +55,7 @@ p {
 h2 {
     color: var(--color-h2);
     text-align: center;
-    font-family: 'montserrat',
-        sans-serif;
+    font-family: 'montserrat', sans-serif;
     font-style: normal;
     font-weight: 100;
 }
@@ -84,6 +81,8 @@ li {
     font-family: 'arial', sans-serif;
     font-weight: 200;
     font-size: 1.1rem;
+    list-style-type: none;
+    font-weight: 200;
 }
 
 .program {
@@ -114,8 +113,7 @@ a {
     color: var(--color-p);
     font-style: normal;
     font-weight: 300;
-    font-family: 'montserrat',
-        sans-serif;
+    font-family: 'montserrat', sans-serif;
     font-size: 1.2rem;
     text-align: center;
 }
@@ -133,8 +131,7 @@ a:hover {
     color: var(--color-p);
     font-style: normal;
     font-weight: 300;
-    font-family: 'montserrat',
-        sans-serif;
+    font-family: 'montserrat', sans-serif;
     font-size: 1.2rem;
     left: 80vw;
     top: 60px;
@@ -164,7 +161,6 @@ span:hover {
 /* ----- 0.2 BURGERMENU ----- */
 
 .hidden {
-    transform: scale(0);
     display: none;
 }
 
@@ -174,6 +170,7 @@ span:hover {
     padding-left: 15px;
     font-size: 2.3rem;
     font-family: 'helvetica', sans-serif;
+    cursor: pointer;
 }
 
 #menu {
@@ -232,7 +229,6 @@ span:hover {
     font-size: 3.5rem;
     font-style: italic;
     font-family: 'Petit Formal Script', cursive;
-
     color: #be939a;
 }
 
@@ -295,8 +291,7 @@ span:hover {
     border: 1px white solid;
     width: 40%;
     font-weight: 300;
-    font-family: 'montserrat',
-        sans-serif;
+    font-family: 'montserrat', sans-serif;
 }
 
 /*----------------------------*/
@@ -326,8 +321,7 @@ span:hover {
     border: 1px white solid;
     width: 40%;
     font-weight: 300;
-    font-family: 'montserrat',
-        sans-serif;
+    font-family: 'montserrat', sans-serif;
 }
 
 /*----------------------------*/
@@ -356,8 +350,7 @@ span:hover {
     border: 1px white solid;
     width: 50%;
     font-weight: 300;
-    font-family: 'montserrat',
-        sans-serif;
+    font-family: 'montserrat', sans-serif;
 }
 
 /*----------------------------*/
@@ -386,8 +379,7 @@ span:hover {
     border: 1px white solid;
     width: 65%;
     font-weight: 300;
-    font-family: 'montserrat',
-        sans-serif;
+    font-family: 'montserrat', sans-serif;
 }
 
 
@@ -417,8 +409,7 @@ span:hover {
     border: 1px white solid;
     width: 88%;
     font-weight: 300;
-    font-family: 'montserrat',
-        sans-serif;
+    font-family: 'montserrat', sans-serif;
 }
 
 /*----------------------------*/
@@ -448,8 +439,7 @@ span:hover {
     width: 48%;
     height: 13%;
     font-weight: 300;
-    font-family: 'montserrat',
-        sans-serif;
+    font-family: 'montserrat', sans-serif;
 }
 
 /* ------ 2.1 CV ------ */
@@ -481,16 +471,6 @@ span:hover {
 
 video {
     width: 80%;
-}
-
-li {
-    list-style-type: none;
-    font-weight: 200;
-}
-
-.experience p {
-    display: list-item;
-    list-style-type: disc;
 }
 
 #container {
@@ -1031,7 +1011,6 @@ li {
 .uxp_image {
     flex-basis: 300px;
     flex-grow: 1;
-    text-align: center;
 }
 
 .uxp_image img {
